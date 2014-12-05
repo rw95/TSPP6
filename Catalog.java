@@ -24,6 +24,11 @@ public class Catalog {
 		//view();
 	}
 	
+	void orderItem(String _name, int _id, productData dt, String address, float phoneNumber){
+		orderData orderDt = new orderData(_name, _id, dt, address, phoneNumber);
+		ordItems.add(orderDt);
+	}
+	
 	ArrayList<productData> getArrayList(){
 		return items;
 	}
