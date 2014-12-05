@@ -29,6 +29,11 @@ public class Catalog {
 		ordItems.add(orderDt);
 	}
 	
+	void askAboutItem(String _name, int _id, String _msg){
+		messangeData msgDt = new messangeData(_name, _id, _msg);
+		msgData.add(msgDt);
+	}
+	
 	ArrayList<productData> getArrayList(){
 		return items;
 	}
