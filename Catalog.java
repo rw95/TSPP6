@@ -11,7 +11,18 @@ public class Catalog {
 		msgData = new ArrayList<messangeData>();
 	}
 
-
+	void sort(ArrayList<productData> items){
+		for (int i = items.size()-1; i >= 0; i--){
+		    for (int j = 0; j < i; j++){
+		      if (items.get(j).price > items.get(j+1).price){
+		        float tmp = items.get(j).price;
+		        items.get(j).price = items.get(j+1).price;
+		        items.get(j+1).price = tmp;
+		      }
+		    }
+		  }
+		//view();
+	}
 	
 	ArrayList<productData> getArrayList(){
 		return items;
