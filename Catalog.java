@@ -34,6 +34,13 @@ public class Catalog {
 		msgData.add(msgDt);
 	}
 	
+	productData addItem(String _name, int _id, String processor, Float screenSize, String color, float price){
+		//throw new UnsupportedOperationException();
+		productData dt = new productData(_name, _id, processor, screenSize, color, price);
+		items.add(dt);
+		return dt;
+	}
+	
 	ArrayList<productData> getArrayList(){
 		return items;
 	}
